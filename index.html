@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Registration Page</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    @media only screen and (max-width:800px){
+      html {
+    font-size: 40% !important;
+    scroll-behavior: smooth;
+    }
+      .form{
+        width: 80% !important;
+        height: 60% !important;
+      }
+    }
+    html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    }
+    body{
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+    .container{
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    }
+    .form{
+      background: radial-gradient(circle, rgba(190,235,250,1) 0%, rgba(85,147,230,1) 51%, rgba(17,99,198,1) 97%, rgba(2,62,133,1) 100%);
+      width: 30%;
+      height: 60%;
+      border-radius: 10px;
+      padding: 1rem 2rem;
+      box-shadow: 0 0 2rem 1rem rgba(190,235,250,1);
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+    }
+    .heading > h1{
+      text-align: center;
+    }
+    .form-group{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+    }
+    .form-group > label{
+      font-size: 2rem;
+    }
+    .form-group > input[type=text],
+    .form-group > input[type=password],  .form-group > input[type=number]{
+      font-size: 2rem;
+      background-color:rgba(85,147,230,1) ;
+      border: .2rem solid white;
+      border-radius: .3rem;
+      padding: 0 .5rem;
+      width: 60%;
+    }
+    .btn{
+      display:flex;
+      justify-content: right;
+      margin-top: 2rem;
+    }
+    .btn-primary{
+      display: inline-block;
+      font-size: 2rem;
+      background-color:rgba(2,0,36,1);
+      border: .2rem solid white;
+      border-radius: .3rem;
+      padding: .5rem 1rem;
+      color: white;
+    }
+    .btn-primary:hover{
+      background-color:rgba(17,99,198,1);
+      color: black;
+    }
+ 
+    /* .btn:hover{
+      background-color:rgba(85,147,230,1) ;
+    } */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form">
+      <form action="index.php" method="post">
+        <div class="heading">
+          <h1>Student Login Form</h1>
+        </div>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" name="firstName" />
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="lastName" name="lastName" />
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <div>
+            <label for="male" class="radio-inline"><input type="radio" name="gender" value="m" id="male" />Male</label>
+            <label for="female" class="radio-inline"><input type="radio" name="gender" value="f"
+                id="female" />Female</label>
+            <label for="others" class="radio-inline"><input type="radio" name="gender" value="o"
+                id="others" />Others</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="email" name="email" />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password" />
+        </div>
+        <div class="form-group">
+          <label for="number">Phone Number</label>
+          <input type="number" class="form-control" id="number" name="number" />
+        </div>
+        <div class="btn">
+          <input type="submit" class="btn btn-primary" />
+        </div>
+       
+      </form>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
